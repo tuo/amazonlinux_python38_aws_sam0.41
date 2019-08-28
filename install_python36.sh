@@ -1,13 +1,17 @@
 #!/bin/sh
 
-# Install Python3.6.5
-wget https://www.python.org/ftp/python/3.6.5/Python-3.6.5.tar.xz
-tar xJf Python-3.6.5.tar.xz
-cd Python-3.6.5
+# Install system dependencies
+yum install -y wget tar make xz gcc zlib-devel openssl-devel
+
+# Install Python3.6.1
+wget https://www.python.org/ftp/python/3.6.1/Python-3.6.1.tar.xz
+tar xJf Python-3.6.1.tar.xz
+cd Python-3.6.1
 ./configure
 make
 make install
 
 # Clean up
 cd ..
-rm -rf Python3.6.5
+rm -rf Python3.6.1
+yum remove -y wget tar make xz gcc zlib-devel openssl-devel
