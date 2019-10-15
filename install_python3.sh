@@ -9,10 +9,11 @@ fi
 
 echo "Installing Python version ${VERSION}"
 
-DEPENDENCIES="wget tar make xz gcc zlib-devel openssl-devel libffi-devel"
+NON_REMOVABLE_DEPENDENCIES="gcc"
+REMOVABLE_DEPENDENCIES="wget tar make xz zlib-devel openssl-devel libffi-devel"
 
 # Install system dependencies
-yum install -y $DEPENDENCIES
+yum install -y $NON_REMOVABLE_DEPENDENCIES $REMOVABLE_DEPENDENCIES
 
 # Install Python
 wget "https://www.python.org/ftp/python/${VERSION}/Python-${VERSION}.tar.xz"
@@ -25,4 +26,4 @@ make install
 # Clean up
 cd ..
 rm -rf "Python${VERSION}"
-yum remove -y $DEPENDENCIES
+yum remove -y $REMOVABLE_DEPENDENCIES
