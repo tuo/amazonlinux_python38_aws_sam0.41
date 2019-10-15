@@ -9,7 +9,7 @@ fi
 
 echo "Installing Python version ${VERSION}"
 
-DEPENDENCIES="wget tar make xz gcc zlib-devel openssl-devel"
+DEPENDENCIES="wget tar make xz gcc zlib-devel openssl-devel libffi-devel"
 
 # Install system dependencies
 yum install -y $DEPENDENCIES
