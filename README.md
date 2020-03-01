@@ -1,4 +1,4 @@
-# amazonlinux_python3 
+# amazonlinux_python3.8 AWS SAM CLI 0.41.0
 
 refer to : (https://github.com/tuo/amazonlinux_python38_aws_sam0.41.git)
 Docker image with amazonlinux2 and Python3 installed.
@@ -41,3 +41,5 @@ https://docs.aws.amazon.com/codebuild/latest/userguide/sample-ecr.html
 and select custom image in evironemnet
 
 and select Project Role
+
+<img width="1440" alt="Screenshot 2020-03-01 at 21 41 08" src="https://user-images.githubusercontent.com/491610/75626774-432f8100-5c05-11ea-8087-8abfd531be55.png">
