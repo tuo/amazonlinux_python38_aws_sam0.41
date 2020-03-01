@@ -20,12 +20,16 @@ But we don't want to run `pip install aws-sam-cli==0.41.0` in our pre-build scri
 
 ### ECR:
 
-
+```
 export _DOCKER_REPO="$(aws ecr get-authorization-token --output text  --query 'authorizationData[].proxyEndpoint')"
-aws ecr get-login --no-include-email --region cn-north-1 | awk '{print $6}' | docker login -u AWS --password-stdin $_DOCKER_REPO
-docker build -t serverless .
-docker tag serverless:latest 975754580786.dkr.ecr.cn-north-1.amazonaws.com.cn/serverless:latest
 
+aws ecr get-login --no-include-email --region cn-north-1 | awk '{print $6}' | 
+docker login -u AWS --password-stdin $_DOCKER_REPO
+
+docker build -t serverless .
+
+docker tag serverless:latest 975754580786.dkr.ecr.cn-north-1.amazonaws.com.cn/serverless:latest
+```
 
 
 Then set its permission to allow codebuild access in sidebar:
