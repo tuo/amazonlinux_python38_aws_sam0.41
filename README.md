@@ -11,6 +11,11 @@ Note: Amazonlinux2 comes with Python2.7.14 installed.
 
 aws-sam-cli 0.41.0
 
+### Purpose
+
+added aws sam 0.41.0 as we want to have sam build in buildspec.yml as part of CodeBuild.
+
+But we don't want to run `pip install aws-sam-cli==0.41.0` in our pre-build scripts.
 
 
 ### ECR:
