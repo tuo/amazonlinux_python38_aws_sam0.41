@@ -1,4 +1,6 @@
-# amazonlinux_python3
+# amazonlinux_python3 
+
+refer to : (https://github.com/tuo/amazonlinux_python38_aws_sam0.41.git)
 Docker image with amazonlinux2 and Python3 installed.
 
 Python 3.8.0 is installed by the install script, but a different version can be
